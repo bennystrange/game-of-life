@@ -47,7 +47,7 @@ begin
             new_grid[cell_idx] = 1'b0;
             cell_idx = cell_idx + 1;
         end
-        if ((btn1 ==1) && (btn0 == 0))begin
+        else if ((btn1 ==1) && (btn0 == 0))begin
             new_grid[cell_idx] = 1'b1;
             cell_idx = cell_idx + 1;
         end
