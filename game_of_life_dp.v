@@ -48,7 +48,7 @@ begin
             cell_idx = cell_idx + 1;
         end
         if ((btn1 ==1) && (btn0 == 0))begin
-            grid[cell_idx] = 1'b1;
+            new_grid[cell_idx] = 1'b1;
             cell_idx = cell_idx + 1;
         end
     end
@@ -254,6 +254,8 @@ begin
         new_grid = 64'b0; //reset the new grid
         cell_idx = 1'b0; //reset the cell index
         num_neighbors = 2'b00; //reset the neighbor count
+    end else if (state == 2'b01) begin
+        grid = new_grid;
     end
     else begin
          //update the grid with the new grid
