@@ -66,33 +66,8 @@ end
 //----------Output Logic——————————————
 always @ (negedge clkb)
 begin : OUTPUT_LOGIC
-  case(next_state)
-  IDLE: begin
     state <= next_state;
-    cell_idx <= 7'b0000000;
     game_state <= next_state;
-  end
-  PROGRAM: begin
-    state <= next_state;
-    cell_idx <= 7'b0000000;
-    game_state <= next_state;
-  end
-  RUN: begin
-    state <= next_state;
-    cell_idx <= 7'b0000000;
-    game_state <= next_state;
-  end
-  PAUSE: begin
-    state <= next_state;
-    cell_idx <= 7'b0000000;
-    game_state <= next_state;
-  end
-  default: begin
-    state <= next_state;
-    cell_idx <= 7'b0000000;
-    game_state <= next_state;
-  end
-  endcase
 end 
 
 endmodule 
