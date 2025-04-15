@@ -1,4 +1,4 @@
-module gol_top_module_tb();
+module TOP_SEVEN_tb();
 
 // Inputs to top_module
 reg in_clka, in_clkb, in_stop, in_prgm, in_pp, in_btn0, in_btn1;
@@ -8,16 +8,15 @@ wire [1:0] out_game_state;
 wire [48:0] out_grid;
 
 //create a top FSM system instance.
-gol_top_module top (.in_clka (in_clka),
-           		.in_clkb (in_clkb),
-		        .in_stop (in_stop),
-			    .in_prgm (in_prgm),
-		        .in_pp (in_pp),
-				.in_btn0 (in_btn0),
-				.in_btn1 (in_btn1),
-			    .out_game_state(out_game_state),
-			    .out_grid (out_grid)
-		          );
+TOP_SEVEN U1 (.in_clka (in_clka),
+              .in_clkb (in_clkb),
+	      .in_stop (in_stop),
+	      .in_prgm (in_prgm),
+	      .in_pp (in_pp),
+	      .in_btn0 (in_btn0),
+	      .in_btn1 (in_btn1),
+	      .out_game_state(out_game_state),
+	      .out_grid (out_grid));
 
 
 task run_one_cycle;
