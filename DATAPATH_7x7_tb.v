@@ -1,4 +1,4 @@
-module datapath_tb ();
+module DATAPATH_7x7_tb ();
 
     reg clka, clkb, btn0, btn1, stop;
     reg [1:0] state;
@@ -6,7 +6,7 @@ module datapath_tb ();
     wire [48:0] grid;
 
     // Instantiate the 7x7 DATAPATH module.
-    DATAPATH U1(
+    DATAPATH_7x7 U1(
         .clka(clka),
         .clkb(clkb),
         .state(state),
