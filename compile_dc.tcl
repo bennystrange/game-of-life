@@ -12,10 +12,10 @@
 #/* Edit this part only of the file.                                     */
 #/* Add all verilog files, separated by spaces after keyword "list"      */
 
-set my_verilog_files [list DATAPATH_SEVEN.v FSM.V TOP_SEVEN.v TOP_SEVEN_tb.v]
+set my_verilog_files [list DATAPATH_SEVEN.v FSM.v TOP_SEVEN.v]
 
 #/* Top-level Module Name update                             */
-set my_toplevel TOP_SEVEN_tb
+set my_toplevel TOP_SEVEN
 
 #/* The name of the clock pin. If no clock-pin     */
 #/* exists, pick anything                          */
