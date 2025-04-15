@@ -5,7 +5,7 @@
 ////-----------------------------------------------------
 //
 //inputs
-module fsm_tb();
+module FSM_tb();
 
 reg in_clka, in_clkb, in_stop, in_prgm, in_pp, in_btn0, in_btn1;
 
@@ -32,7 +32,7 @@ task run_cycles;
     end
 endtask
 
-game_of_life_FSM fsm(.clka(in_clka), 
+FSM U1(.clka(in_clka), 
                 .clkb(in_clkb), 
                 .stop(in_stop), 
                 .prgm(in_prgm), 
