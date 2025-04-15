@@ -8,7 +8,6 @@ output  game_state[1:0];
 //-------------Input ports Data Type-------------------
 wire    clka, clkb, stop, prgm, pp, btn0, btn1;
 //-------------Output Ports Data Type------------------
-reg     [6:0] cell_idx;
 reg     [1:0] game_state;
 //——————Internal Constants--------------------------
 parameter SIZE = 2;
@@ -39,11 +38,6 @@ case(state)
             fsm_function = RUN;
         else
             fsm_function = PROGRAM;
-            // if (prgm == 1)
-            //     cell_idx <= cell_idx - 1;
-            // else if ((btn0 == 1 && btn1 == 0) || (btn0 == 0 && btn1 == 1)) begin
-            //     cell_idx <= cell_idx + 1;
-            // end
     end
     RUN: begin
         if (pp)
