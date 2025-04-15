@@ -1,9 +1,8 @@
 
-module game_of_life_FSM (clka, clkb, stop, prgm, pp, btn0, btn1, cell_idx, game_state);
+module game_of_life_FSM (clka, clkb, stop, prgm, pp, btn0, btn1, game_state);
 //-------------Input Ports-----------------------------
 input   clka, clkb, stop, prgm, pp, btn0, btn1;
 //-------------Output Ports----------------------------
-output  cell_idx[6:0];
 output  game_state[1:0];
 //-------------Input ports Data Type-------------------
 wire    clka, clkb, stop, prgm, pp, btn0, btn1;
