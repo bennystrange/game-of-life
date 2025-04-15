@@ -1,5 +1,5 @@
 
-module game_of_life_FSM (clka, clkb, stop, prgm, pp, btn0, btn1, game_state);
+module FSM (clka, clkb, stop, prgm, pp, btn0, btn1, game_state);
 //-------------Input Ports-----------------------------
 input   clka, clkb, stop, prgm, pp, btn0, btn1;
 //-------------Output Ports----------------------------
