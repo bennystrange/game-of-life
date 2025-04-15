@@ -71,7 +71,7 @@ begin
                 new_grid[i] = cell_state(num_neighbors, grid[i]);
                 num_neighbors = 0;
             end
-            else if(cell_idx == 7)begin
+            else if(i == 7)begin
                 //top right corner
                 if(grid[6] == 1)begin
                     num_neighbors = num_neighbors + 1;
@@ -86,7 +86,7 @@ begin
                 new_grid[i] = cell_state(num_neighbors, grid[i]);
                 num_neighbors = 0;
             end
-            else if(cell_idx == 56)begin
+            else if(i == 56)begin
                 //bot left corner
                 if(grid[48] == 1)begin
                     num_neighbors = num_neighbors + 1;
@@ -101,7 +101,7 @@ begin
                 new_grid[i] = cell_state(num_neighbors, grid[i]);
                 num_neighbors = 0;
             end
-            else if(cell_idx == 63)begin
+            else if(i == 63)begin
                 //bot right corner
                 if(grid[54] == 1)begin
                     num_neighbors = num_neighbors + 1;
