@@ -1,4 +1,4 @@
-module datapath_tb ();
+module DATAPATH_tb ();
 
     reg clka, clkb, btn0, btn1, stop;
     reg [1:0] state;
