@@ -1,4 +1,4 @@
-module DATAPATH (clka, clkb, state, btn0, btn1, stop, grid);
+module DATAPATH_7x7 (clka, clkb, state, btn0, btn1, stop, grid);
     input wire clka, clkb, btn0, btn1, stop;
     input wire [1:0] state;
     // For a 7x7 grid, we have 49 cells, so we use [48:0].
