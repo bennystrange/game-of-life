@@ -14,7 +14,7 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
     reg debug1;
 
     // Function to determine the next state of a cell based on its neighbor count
-    function reg cell_state;
+    function cell_state;
         input [3:0] num_live_neighbors; 
         input current_state;
         if (current_state) begin
@@ -44,7 +44,8 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
         case(state)
             2'b00: begin
                 // IDLE state: clear new_grid
-                new_grid = 49'b0;
+                new_grid <= 49'b0;
+                cell_idx <= 6'b0;
             end
             2'b01: begin
                 // PROGRAM state: assign cell values from button presses
@@ -146,29 +147,26 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
                         if (grid[i+8] == 1) num_neighbors = num_neighbors + 1;
                     end
                     // Update the new grid cell state based on current state and neighbor count
-                    new_grid[i] = cell_state(num_neighbors, grid[i]);
-                    num_neighbors = 4'b0;
+                    new_grid[i] <= cell_state(num_neighbors, grid[i]);
+                    num_neighbors <= 4'b0;
                 end
                 i = 7'b0; // Reset loop variable
             end
             default: begin
                 // Do nothing (pause state)
             end
+            cell_idx <= 6'b0;
         endcase
     end
 
     always @ (negedge clkb) begin
         if(stop == 1) begin
             grid = 49'b0;   // Reset grid
-            new_grid = 49'b0; // Reset new_grid
-            cell_idx = 6'b0;  // Reset cell index
-            num_neighbors = 4'b0; // Reset neighbor count
         end else if (state == 2'b01) begin
             grid = new_grid;
         end else begin
             // Update grid with computed new grid and then clear new_grid
             grid = new_grid;
-            new_grid = 49'b0;
         end
     end
 endmodule
