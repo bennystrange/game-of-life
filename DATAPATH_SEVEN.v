@@ -155,7 +155,6 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
             default: begin
                 // Do nothing (pause state)
             end
-            cell_idx <= 6'b0;
         endcase
     end
 
