@@ -44,18 +44,18 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
         case(state)
             2'b00: begin
                 // IDLE state: clear new_grid
-                new_grid <= 49'b0;
-                cell_idx <= 6'b0;
+                new_grid = 49'b0;
+                cell_idx = 6'b0;
             end
             2'b01: begin
                 // PROGRAM state: assign cell values from button presses
                 if ((btn0 == 1) && (btn1 == 0)) begin
-                    new_grid[cell_idx] <= 1'b0;
-                    cell_idx <= cell_idx + 1;
+                    new_grid[cell_idx] = 1'b0;
+                    cell_idx = cell_idx + 1;
                 end
                 else if ((btn1 == 1) && (btn0 == 0)) begin
-                    new_grid[cell_idx] <= 1'b1;
-                    cell_idx <= cell_idx + 1;
+                    new_grid[cell_idx] = 1'b1;
+                    cell_idx = cell_idx + 1;
                 end
             end
             2'b10: begin // RUN state logic: update the grid according to Game of Life rules
@@ -147,8 +147,8 @@ module DATAPATH_SEVEN (clka, clkb, state, btn0, btn1, stop, grid);
                         if (grid[i+8] == 1) num_neighbors = num_neighbors + 1;
                     end
                     // Update the new grid cell state based on current state and neighbor count
-                    new_grid[i] <= cell_state(num_neighbors, grid[i]);
-                    num_neighbors <= 4'b0;
+                    new_grid[i] = cell_state(num_neighbors, grid[i]);
+                    num_neighbors = 4'b0;
                 end
                 i = 7'b0; // Reset loop variable
             end
