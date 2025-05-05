@@ -1,0 +1,62 @@
+file name: pinmap.txt
+file description: text file listing I/O pin and signal direction (input/output/bi-directional) and signal name for Game of Life chip
+note: pin order starts in top left and moves clockwise, 56 total
+-----------------------------------------------------------
+PIN # | I/O PIN NAME   |  SIGNAL DIRECTION  |  SIGNAL NAME
+-----------------------------------------------------------
+21         17_1               OUTPUT          p_grid37               
+20         17_0               OUTPUT          p_grid43
+19         17_2               OUTPUT          p_grid44
+18         17_3               INPUT           clkb
+17         17_4               INPUT           p_prgm
+16         17_5               OUTPUT          p_grid38
+14         17_6               INPUT           p_pp
+13         17_7               OUTPUT          p_grid45
+12         17_8               INPUT           p_btn1
+11         PadBiDir_0         INPUT           p_btn0
+10         PadBiDir_1         OUTPUT          p_grid31
+9          PadBiDir_2         OUTPUT          p_grid46
+7          PadBiDir_3         OUTPUT          p_grid39
+6          PadBiDir_4         OUTPUT          p_grid47
+5          17_17              OUTPUT          p_grid48
+4          17_18              OUTPUT          p_grid40
+3          17_19              OUTPUT          p_grid41
+2          17_20              OUTPUT          p_grid32
+1          17_21              OUTPUT          p_grid34
+63         PadBiDir_19        OUTPUT          p_grid33
+62         PadBiDir_18        OUTPUT          p_grid25
+61         PadBiDir_17        OUTPUT          p_grid26
+60         PadBiDir_16        OUTPUT          p_grid27
+59         PadBiDir_15        OUTPUT          p_grid18
+57         17_22              OUTPUT          p_grid20
+56         17_23              OUTPUT          p_grid19
+55         17_24              OUTPUT          p_grid12
+54         17_34              OUTPUT          p_grid13
+53         PadBiDir_9         OUTPUT          p_grid5
+52         PadBiDir_8         OUTPUT          p_grid6
+51         PadBiDir_7         OUTPUT          p_grid11
+50         PadBiDir_6         OUTPUT          p_grid4
+49         PadBiDir_5         OUTPUT          p_grid3
+47         17_35              OUTPUT          p_grid10
+46         17_33              OUTPUT          p_grid24
+45         17_23              OUTPUT          p_grid17
+44         17_31              INPUT           clka
+43         17_30              OUTPUT          p_grid9
+41         17_29              OUTPUT          p_grid2
+40         17_28              OUTPUT          p_grid16
+39         17_27              OUTPUT          p_grid1
+38         17_16              OUTPUT          p_grid8
+37         17_25              OUTPUT          p_grid0
+36         17_16              OUTPUT          p_grid7 
+35         17_15              OUTPUT          p_grid14
+34         17_14              OUTPUT          p_grid15
+33         PadBiDir_10        OUTPUT          p_grid21
+31         PadBiDir_11        OUTPUT          p_grid22
+30         PadBiDir_12        OUTPUT          p_grid23
+29         PadBiDir_13        INPUT           p_stop
+28         PadBiDir_14        OUTPUT          p_grid28
+27         17_13              OUTPUT          p_grid29
+25         17_12              OUTPUT          p_grid30
+24         17_11              OUTPUT          p_grid36
+23         17_10              OUTPUT          p_grid35
+22         17_9               OUTPUT          p_grid42
