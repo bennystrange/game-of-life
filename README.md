@@ -1,2 +1,3 @@
 # GameOfLife
-game of life in verilog bangggg
+
+Verilog implementation of Conway's Game of Life
